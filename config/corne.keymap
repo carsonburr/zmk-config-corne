@@ -52,13 +52,13 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-// |  ~  |     |     |     | GUI |   |  -  |  =  |  [  |  ]  |  "  |
+// |  ~  |     |     |     |     |   |  -  |  =  |  [  |  ]  |  "  |
 // |  `  |     |     |  \  | "|" |   |  _  |  +  |  {  |  }  |  '  |
 //             | RET | ESC | BSP |   | SPC |     | TAB |
                         bindings = <
    &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR &kp PRCNT     &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
    &trans  &kp TILDE &trans  &trans    &trans   &trans        &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp DQT  &trans
-   &trans  &kp GRAVE &trans  &kp BSLH  &kp PIPE &trans        &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp SQT  &trans
+   &trans  &kp GRAVE &trans  &trans    &kp BSLH &kp PIPE      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp SQT  &trans
                              &kp RET   &kp ESC  &kp BSPC      &kp SPACE &trans    &kp TAB
                         >;
                 };
