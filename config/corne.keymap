@@ -78,15 +78,15 @@
                 };
                 game_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC |  Q  |  W  |  E  |  R  |   |     |     |     |     |     |
-// | LSH |  A  |  S  |  D  |  F  |   |     |     |     |     |     |
-// | CRL |  1  |  2  |  3  |  4  |   |     |     |     |     | OFF |
+// | ESC |  Q  |  W  |  E  |  R  |   |     |     | BR- | BR+ |     |
+// | LSH |  A  |  S  |  D  |  F  |   |     | PAU | VO- | VO+ |     |
+// | CRL |  1  |  2  |  3  |  4  |   |     | MUT | <<  |  >> | OFF |
 //             | RET | TAB | SPC |   |     |     |     |
                         bindings = <
-   &trans  &kp ESC   &kp Q  &kp W  &kp E  &kp R     &trans &trans &trans &trans &trans &trans
-   &trans  &kp LSHFT &kp A  &kp S  &kp D  &kp F     &trans &trans &trans &trans &trans &trans
-   &trans  &kp LCTRL &kp N1 &kp N2 &kp N3 &kp N4    &trans &trans &trans &trans &tog 3 &trans
-                            &trans &trans &trans    &trans &trans &trans
+   &trans  &kp ESC   &kp Q  &kp W  &kp E  &kp R     &trans &kp C_BRI_DN &kp C_BRI_UP &trans &trans &trans
+   &trans  &kp LSHFT &kp A  &kp S  &kp D  &kp F     &trans &kp C_VOL_DN &kp C_VOL_UP &trans &trans &trans
+   &trans  &kp LCTRL &kp N1 &kp N2 &kp N3 &kp N4    &trans &kp C_PREV   &kp C_NEXT   &trans &tog 3 &trans
+                            &trans &trans &trans    &trans &trans       &trans
                         >;
                 };
         };
@@ -112,7 +112,7 @@
 // |     |     |     |         |       |   |       |   MUT   | <<  |  >> |     |
 //             |     |         |       |   |       |         |     |
 // -----------------------------------------------------------------------------------------
-// | ESC |  Q  |  W  |    E    |   R   |   |       |         |     |     |     |
-// | LSH |  A  |  S  |    D    |  _F_  |   |       |   ___   |     |     |     |
-// | CRL |  1  |  2  |    3    |   4   |   |       |         |     |     | OFF |
+// | ESC |  Q  |  W  |    E    |   R   |   |       |         | BR- | BR+ |     |
+// | LSH |  A  |  S  |    D    |  _F_  |   |       |  _PAU_  | VO- | VO+ |     |
+// | CRL |  1  |  2  |    3    |   4   |   |       |   MUT   | <<  |  >> | OFF |
 //             | RET |   TAB   |  SPC  |   |       |         |     |
