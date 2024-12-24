@@ -66,14 +66,27 @@
                 tri_layer {
 // -----------------------------------------------------------------------------------------
 // | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     | BR- | BR+ |     |
-// |     |     |     |     | BCL |   |     | PAU | VO- | VO+ |     |
+// |     |     |     | GAM | BCL |   |     | PAU | VO- | VO+ |     |
 // |     |     |     |     |     |   |     | MUT | <<  |  >> |     |
 //             |     |     |     |   |     |     |     |
                         bindings = <
    &trans  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &trans     &kp C_BRI_DN &kp C_BRI_UP &trans &trans
-   &trans  &trans       &trans       &trans       &trans       &bt BT_CLR     &trans &kp C_PP   &kp C_VOL_DN &kp C_VOL_UP &trans &trans
+   &trans  &trans       &trans       &trans       &to 4        &bt BT_CLR     &trans &kp C_PP   &kp C_VOL_DN &kp C_VOL_UP &trans &trans
    &trans  &trans       &trans       &trans       &trans       &trans         &trans &kp C_MUTE &kp C_PREV   &kp C_NEXT   &trans &trans
                                      &trans       &trans       &trans         &trans &trans     &trans
+                        >;
+                };
+                game_layer {
+// -----------------------------------------------------------------------------------------
+// | ESC |  Q  |  W  |  E  |  R  |   |     |     |     |     |     |
+// | LSH |  A  |  S  |  D  |  F  |   |     |     |     |     |     |
+// | CRL |  1  |  2  |  3  |  4  |   |     |     |     |     | OFF |
+//             | RET | TAB | SPC |   |     |     |     |
+                        bindings = <
+   &trans  &kp ESC   &kp Q  &kp W  &kp E  &kp R     &trans &trans &trans &trans &trans &trans
+   &trans  &kp LSHFT &kp A  &kp S  &kp D  &kp F     &trans &trans &trans &trans &trans &trans
+   &trans  &kp LCTRL &kp N1 &kp N2 &kp N3 &kp N4    &trans &trans &trans &trans &tog 3 &trans
+                            &trans &trans &trans    &trans &trans &trans
                         >;
                 };
         };
@@ -95,6 +108,11 @@
 //             | RET |   TRI   |  BSP  |   |  SPC  |         | TAB |
 // -----------------------------------------------------------------------------------------
 // | BT1 | BT2 | BT3 |   BT4   |  BT5  |   |       |         | BR- | BR+ |     |
-// |     |     |     |   ___   |  BCL  |   |       |  _PAU_  | VO- | VO+ |     |
+// |     |     |     |  _GAM_  |  BCL  |   |       |  _PAU_  | VO- | VO+ |     |
 // |     |     |     |         |       |   |       |   MUT   | <<  |  >> |     |
 //             |     |         |       |   |       |         |     |
+// -----------------------------------------------------------------------------------------
+// | ESC |  Q  |  W  |    E    |   R   |   |       |         |     |     |     |
+// | LSH |  A  |  S  |    D    |  _F_  |   |       |   ___   |     |     |     |
+// | CRL |  1  |  2  |    3    |   4   |   |       |         |     |     | OFF |
+//             | RET |   TAB   |  SPC  |   |       |         |     |
