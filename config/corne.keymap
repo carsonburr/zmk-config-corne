@@ -37,14 +37,14 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |     |  7  |  8  |  9  |     |   |       |    -    |  +  |  *  |     |
+// |     |  7  |  8  |  9  |     |   |   +   |    -    |  [  |  ]  |  *  |
 // | C/0 | A/4 | G/5 |  6  |     |   |  LFT  |   DWN   |  UP | RGT | DEL |
 // |  _  |  1  |  2  |  3  |     |   |  HOM  |   END   |  ,  |  .  |  /  |
 //             | RET |     | BSP |   | S/SPC | ESC/TRI | TAB |
                         bindings = <
-   &trans  &trans       &kp N7      &kp N8       &kp N9  &trans     &trans           &kp MINUS &kp PLUS  &kp ASTRK &trans   &trans
-   &trans  &hm LCTRL N0 &hm LALT N4 &hm LGUI N5  &kp N6  &trans     &kp LEFT         &kp DOWN  &kp UP    &kp RIGHT &kp DEL  &trans
-   &trans  &kp UNDER    &kp N1      &kp N2       &kp N3  &trans     &kp HOME         &kp END   &kp COMMA &kp DOT   &kp FSLH &trans
+   &trans  &trans       &kp N7      &kp N8       &kp N9  &trans     &kp PLUS         &kp MINUS &kp LBKT  &kp RBKT  &kp ASTRK &trans
+   &trans  &hm LCTRL N0 &hm LALT N4 &hm LGUI N5  &kp N6  &trans     &kp LEFT         &kp DOWN  &kp UP    &kp RIGHT &kp DEL   &trans
+   &trans  &kp UNDER    &kp N1      &kp N2       &kp N3  &trans     &kp HOME         &kp END   &kp COMMA &kp DOT   &kp FSLH  &trans
                                     &kp RET      &trans  &kp BSPC   &mt LSHIFT SPACE &mo 3     &kp TAB
                         >;
                 };
@@ -52,12 +52,12 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |     |  @  |  #  |    $    |  %  |   |  ^  |  &  |  [  |  ]  |     |
-// |  ~  |  `  |  !  |    "    |     |   |     |  =  |  (  |  )  | "|" |
+// |  ~  |  `  |  !  |    "    | SPC |   |  &  |  =  |  (  |  )  | "|" |
 // |     |  -  |  +  |    '    |     |   |     |  *  |  {  |  }  |  \  |
 //             | RET | ESC/TRI | BSP |   | SPC |     | TAB |
                         bindings = <
    &trans  &trans    &kp AT    &kp HASH &kp DLLR  &kp PRCNT     &kp CARET &kp AMPS  &kp LBKT  &kp RBKT &trans   &trans
-   &trans  &kp TILDE &kp GRAVE &kp EXCL &kp DQT   &trans        &trans    &kp EQUAL &kp LPAR  &kp RPAR &kp PIPE &trans
+   &trans  &kp TILDE &kp GRAVE &kp EXCL &kp DQT   &kp SPACE     &kp AMPS  &kp EQUAL &kp LPAR  &kp RPAR &kp PIPE &trans
    &trans  &trans    &kp MINUS &kp PLUS &kp SQT   &kp PIPE      &trans    &kp ASTRK &kp LBRC  &kp RBRC &kp BSLH &trans
                                &kp RET  &mo 3     &kp BSPC      &kp SPACE &trans    &kp TAB
                         >;
@@ -97,13 +97,13 @@
 // |  Z  |  X  |  C  |    V    |   B   |   |   N   |    M    |  ,  |  .  |  /  |
 //             | RET | LWR/ESC | S/BSP |   |  SPC  |  RSE/_  | TAB |
 // -----------------------------------------------------------------------------------------
-// |     |  7  |  8  |    9    |       |   |       |    -    |  +  |  *  |     |
+// |     |  7  |  8  |    9    |       |   |   +   |    -    |  [  |  ]  |  *  |
 // | C/0 | A/4 | G/5 |   _6_   |       |   |  LFT  |  _DWN_  |  UP | RGT | DEL |
 // |  _  |  1  |  2  |    3    |       |   |  HOM  |   END   |  ,  |  .  |  /  |
 //             | RET |         |  BSP  |   | S/SPC |   TRI   | TAB |
 // -----------------------------------------------------------------------------------------
 // |     |  @  |  #  |    $    |   %   |   |   ^   |    &    |  [  |  ]  |     |
-// |  ~  |  `  |  !  |   _"_   |       |   |       |   _=_   |  (  |  )  | "|" |
+// |  ~  |  `  |  !  |   _"_   |  SPC  |   |   &   |   _=_   |  (  |  )  | "|" |
 // |     |  -  |  +  |    '    |       |   |       |    *    |  {  |  }  |  \  |
 //             | RET |   TRI   |  BSP  |   |  SPC  |         | TAB |
 // -----------------------------------------------------------------------------------------
